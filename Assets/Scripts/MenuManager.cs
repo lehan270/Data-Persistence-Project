@@ -10,10 +10,12 @@ using UnityEditor;
 public class MenuManager : MonoBehaviour
 {
     public InputField PlayerNameText;
+    public Text HighScore;
 
     public void Start ()
     {
         PlayerNameText.text = GameManager.Instance.PlayerName;
+        HighScore.text = $"Best Score : {GameManager.Instance.HighScorePlayerName} : {GameManager.Instance.HighScore}";
     }
 
     public void StartGame ()
